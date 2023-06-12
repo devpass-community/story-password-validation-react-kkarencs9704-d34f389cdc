@@ -8,9 +8,10 @@ const initialState = {
 };
 
 export const validatePassword = (password) => {
-  // TODO
-  return false;
+  const passwordRegex = /^\d{6}$/;
+  return passwordRegex.test(password);
 };
+
 
 const Login = () => {
   const [state, setState] = useState(initialState);
